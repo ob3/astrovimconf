@@ -8,6 +8,10 @@ return {
       "nvim-treesitter/nvim-treesitter",
       { "fredrikaverpil/neotest-golang", version = "*" }, -- Installation
     },
+    -- keys = {
+    --   { "<leader>to", "<cmd>Neotest output<cr>", "show output" },
+    --   { "<leader>tp", "<cmd>Neotest output-panel<cr>", "show oputpot panel" },
+    -- },
     config = function()
       local neotest_golang_opts = { testify_enabled = true } -- Specify custom configuration
       require("neotest").setup {
@@ -15,6 +19,18 @@ return {
           require "neotest-golang"(neotest_golang_opts), -- Registration
         },
       }
+      vim.api.nvim_set_keymap(
+        "n",
+        "<leader>to",
+        "<cmd>Neotest output<cr>",
+        { noremap = true, silent = true, desc = "test output" }
+      )
+      vim.api.nvim_set_keymap(
+        "n",
+        "<leader>tp",
+        "<cmd>Neotest output-panel<cr>",
+        { noremap = true, silent = true, desc = "show output panel" }
+      )
       -- Example keybindings for Neotest
       vim.api.nvim_set_keymap(
         "n",
