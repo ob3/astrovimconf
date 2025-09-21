@@ -22,8 +22,12 @@ return {
 
           --my custom
           ["qq"] = { "<Cmd>confirm q<CR>", desc = "close window" },
-
+          -- maps.n["<C-Up>"] = { function() require("smart-splits").resize_up() end, desc = "Resize split up" }
+          -- maps.n["<C-Down>"] = { function() require("smart-splits").resize_down() end, desc = "Resize split down" }
+          -- maps.n["<C-Left>"] = { function() require("smart-splits").resize_left() end, desc = "Resize split left" }
+          -- maps.n["<C-Right>"] = { function() require("smart-splits").resize_right() end, desc = "Resize split right" }
           -- navigation
+          ["C-J"] = { "", desc = "resize split down" },
 
           --navigate tab
           -- ["]]"] = { ":lua require('astrocore.buffer').nav(vim.v.count1)<CR>", desc = "next buffer" },
@@ -31,9 +35,8 @@ return {
           ["K"] = { ":lua require('astrocore.buffer').nav(vim.v.count1)<CR>", desc = "next buffer" },
           ["J"] = { ":lua require('astrocore.buffer').nav(-vim.v.count1)<CR>", desc = "prev buffer" },
 
-          ["oo"] = { ":lua require('snacks').picker.files { hidden = true, ignored = true }<CR>" },
-
           -- file
+          ["oo"] = { ":lua require('snacks').picker.files { hidden = true, ignored = true }<CR>" },
         },
       },
     },
