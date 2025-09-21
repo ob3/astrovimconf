@@ -16,6 +16,24 @@ return {
           ["ts"] = { ":lua require('neotest').summary.toggle()<CR>", desc = "Toggle test summary" },
           ["]e"] = { ":lua require('neotest').jump_to_next_error()<CR>", desc = "next error" },
           ["[e"] = { ":lua require('neotest').jump_to_prev_error()<CR>", desc = "prev error" },
+
+          -- bookmarks
+          ["mm"] = { "<cmd>BookmarksMark<cr>", desc = "bookmark line" },
+
+          --my custom
+          ["qq"] = { "<Cmd>confirm q<CR>", desc = "close window" },
+
+          -- navigation
+
+          --navigate tab
+          -- ["]]"] = { ":lua require('astrocore.buffer').nav(vim.v.count1)<CR>", desc = "next buffer" },
+          -- ["[["] = { ":lua require('astrocore.buffer').nav(-vim.v.count1)<CR>", desc = "prev buffer" },
+          ["K"] = { ":lua require('astrocore.buffer').nav(vim.v.count1)<CR>", desc = "next buffer" },
+          ["J"] = { ":lua require('astrocore.buffer').nav(-vim.v.count1)<CR>", desc = "prev buffer" },
+
+          ["oo"] = { ":lua require('snacks').picker.files { hidden = true, ignored = true }<CR>" },
+
+          -- file
         },
       },
     },
