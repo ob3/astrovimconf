@@ -22,11 +22,6 @@ return {
 
           --my custom
           ["qq"] = { "<Cmd>confirm q<CR>", desc = "close window" },
-          -- maps.n["<C-Up>"] = { function() require("smart-splits").resize_up() end, desc = "Resize split up" }
-          -- maps.n["<C-Down>"] = { function() require("smart-splits").resize_down() end, desc = "Resize split down" }
-          -- maps.n["<C-Left>"] = { function() require("smart-splits").resize_left() end, desc = "Resize split left" }
-          -- maps.n["<C-Right>"] = { function() require("smart-splits").resize_right() end, desc = "Resize split right" }
-          -- navigation
           ["C-J"] = { "", desc = "resize split down" },
 
           --navigate tab
@@ -37,15 +32,21 @@ return {
 
           -- file
           ["oo"] = { ":lua require('snacks').picker.files { hidden = true, ignored = true }<CR>" },
+
+          -- window
+          ["<C-S-k>"] = { ":lua require('smart-splits').resize_up()<CR>", desc = "Resize split up" },
+          ["<C-S-j>"] = { ":lua require('smart-splits').resize_down()<CR>", desc = "Resize split down" },
+          ["<C-S-h>"] = { ":lua require('smart-splits').resize_left()<CR>", desc = "Resize split left" },
+          ["<C-S-l>"] = { ":lua require('smart-splits').resize_right()<CR>", desc = "Resize split right" },
+        },
+        v = {
+          -- neotest
+          ["tr"] = { ":lua require('neotest').run.run()<CR>", desc = "run nearest test" },
+          ["td"] = { ":lua require('neotest').run.run({strategy='dap'})<CR>", desc = "debug nearest test" },
+          ["tf"] = { ":lua require('neotest').run.run(vim.fn.expand('%'))<CR>", desc = "run file test" },
+          ["ta"] = { ":lua require('neotest').run.run(vim.fn.getcwd())<CR>", desc = "run all project test" },
         },
       },
     },
   },
 }
-
--- vim.api.nvim_set_keymap(
---   "n",
---   "to",
---   "<cmd>Neotest output<cr>",
---   { noremap = true, silent = true, desc = "test output" }
--- )
