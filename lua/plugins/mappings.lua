@@ -6,6 +6,7 @@ return {
       mappings = {
         n = {
           -- neotest
+          ["tc"] = { "<cmd>Neotest output-panel clear<cr>", desc = "clear output panel" },
           ["to"] = { "<cmd>Neotest output<cr>", desc = "test output" },
           ["tp"] = { "<cmd>Neotest output-panel<cr>", desc = "show output panel" },
           ["tr"] = { ":lua require('neotest').run.run()<cr>", desc = "run nearest test" },
@@ -22,7 +23,6 @@ return {
 
           --my custom
           ["qq"] = { "<Cmd>confirm q<CR>", desc = "close window" },
-          ["C-J"] = { "", desc = "resize split down" },
 
           --navigate tab
           -- ["]]"] = { ":lua require('astrocore.buffer').nav(vim.v.count1)<CR>", desc = "next buffer" },
@@ -38,6 +38,10 @@ return {
           ["<C-S-j>"] = { ":lua require('smart-splits').resize_down()<CR>", desc = "Resize split down" },
           ["<C-S-h>"] = { ":lua require('smart-splits').resize_left()<CR>", desc = "Resize split left" },
           ["<C-S-l>"] = { ":lua require('smart-splits').resize_right()<CR>", desc = "Resize split right" },
+
+          -- code referrence
+          ["gs"] = { "<leader>ls", desc = "list of symbol" },
+          ["cc"] = { "<cmd>CopilotChat<CR>", desc = "Copilot chat" },
         },
         v = {
           -- neotest
