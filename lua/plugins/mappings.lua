@@ -29,6 +29,7 @@ return {
           -- ["[["] = { ":lua require('astrocore.buffer').nav(-vim.v.count1)<CR>", desc = "prev buffer" },
           ["K"] = { ":lua require('astrocore.buffer').nav(vim.v.count1)<CR>", desc = "next buffer" },
           ["J"] = { ":lua require('astrocore.buffer').nav(-vim.v.count1)<CR>", desc = "prev buffer" },
+          ["A"] = { ":lua require('astrocore.buffer').nav(-vim.v.count1)<CR>", desc = "prev buffer" },
 
           -- file
           ["oo"] = { ":lua require('snacks').picker.files { hidden = true, ignored = true }<CR>" },
@@ -42,6 +43,13 @@ return {
           -- code referrence
           ["gs"] = { "<leader>ls", desc = "list of symbol" },
           ["cc"] = { "<cmd>CopilotChat<CR>", desc = "Copilot chat" },
+          ["cr"] = { "<cmd>CopilotChatReview<CR>", desc = "Copilot review" },
+
+          -- copilot
+          ["<leader>ac"] = { "<cmd>Copilot panel<CR>", desc = "Copilot panel" },
+          ["<leader>aC"] = { "<cmd>Copilot clear<CR>", desc = "Copilot clear" },
+          ["<leader>ag"] = { "<cmd>Copilot toggle_github_copilot<CR>", desc = "toggle github copilot" },
+          ["<leader>aI"] = { "<cmd>Copilot toggle_auto_trigger<CR>", desc = "toggle copilot auto trigger" },
         },
         v = {
           -- neotest
