@@ -18,6 +18,8 @@ return {
           ["]e"] = { ":lua require('neotest').jump_to_next_error()<CR>", desc = "next error" },
           ["[e"] = { ":lua require('neotest').jump_to_prev_error()<CR>", desc = "prev error" },
 
+          ["tt"] = { ":lua require('neotest').coverage.toggle()<CR>", desc = "toggle coverage" },
+
           -- bookmarks
           ["mm"] = { "<cmd>BookmarksMark<cr>", desc = "bookmark line" },
 
