@@ -6,7 +6,7 @@ return {
       mappings = {
         n = {
           -- neotest
-          ["tc"] = { "<cmd>Neotest output-panel clear<cr>", desc = "clear output panel" },
+          ["tq"] = { "<cmd>Neotest output-panel clear<cr>", desc = "clear output panel" },
           ["to"] = { "<cmd>Neotest output<cr>", desc = "test output" },
           ["tp"] = { "<cmd>Neotest output-panel<cr>", desc = "show output panel" },
           ["tr"] = { ":lua require('neotest').run.run()<cr>", desc = "run nearest test" },
@@ -18,7 +18,9 @@ return {
           ["]e"] = { ":lua require('neotest').jump_to_next_error()<CR>", desc = "next error" },
           ["[e"] = { ":lua require('neotest').jump_to_prev_error()<CR>", desc = "prev error" },
 
-          ["tt"] = { ":lua require('neotest').coverage.toggle()<CR>", desc = "toggle coverage" },
+          ["tt"] = { ":lua require('coverage').toggle()<CR>", desc = "toggle coverage" },
+          ["tc"] = { ":lua require('coverage').load(true)<CR>", desc = "load coverage" },
+          ["tC"] = { ":lua require('coverage').clear()<CR>", desc = "clear coverage" },
 
           -- bookmarks
           ["mm"] = { "<cmd>BookmarksMark<cr>", desc = "bookmark line" },

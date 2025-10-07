@@ -23,10 +23,10 @@ return {
     },
     config = function()
       local config = {
-        -- runner = "gotestsum", -- Optional, but recommended
+        runner = "gotestsum", -- Optional, but recommended
         testify_enabled = true,
         coverage = true,
-        runner = "go",
+        -- runner = "go",
         go_test_args = {
           "-v",
           "-race",
@@ -40,6 +40,16 @@ return {
         },
         -- log_level = vim.log.levels.ERROR,
       }
+      
+      -- Auto-load coverage after running tests
+      vim.api.nvim_create_autocmd("User", {
+        pattern = "NeotestRunComplete",
+        callback = function()
+          if vim.fn.filereadable(vim.fn.getcwd() .. "/cover.out") == 1 then
+            require("coverage").load(true)
+          end
+        end,
+      })
     end,
   },
 }
