@@ -22,6 +22,10 @@ return {
           ["tc"] = { ":lua require('coverage').load(true)<CR>", desc = "load coverage" },
           ["tC"] = { ":lua require('coverage').clear()<CR>", desc = "clear coverage" },
 
+          -- debug
+          ["do"] = { ":lua function() require('dap').step_over()<CR>", desc = "step into" },
+          ["<C-CR>"] = { ":lua function() require('dap').step_over()<CR>", desc = "step into" },
+
           -- bookmarks
           ["mm"] = { "<cmd>BookmarksMark<cr>", desc = "bookmark line" },
 
