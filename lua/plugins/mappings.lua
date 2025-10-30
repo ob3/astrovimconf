@@ -58,6 +58,9 @@ return {
           ["<leader>aC"] = { "<cmd>Copilot clear<CR>", desc = "Copilot clear" },
           ["<leader>ag"] = { "<cmd>Copilot toggle_github_copilot<CR>", desc = "toggle github copilot" },
           ["<leader>aI"] = { "<cmd>Copilot toggle_auto_trigger<CR>", desc = "toggle copilot auto trigger" },
+
+          -- json formatting
+          ["<leader>jq"] = { ":%!jq .<CR>", desc = "Format JSON with jq" },
         },
         v = {
           -- neotest
