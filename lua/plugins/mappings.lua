@@ -54,6 +54,7 @@ return {
           ["cr"] = { "<cmd>CopilotChatReview<CR>", desc = "Copilot review" },
 
           -- copilot
+          ["<leader>aa"] = { "<cmd>CopilotChat<CR>", desc = "Copilot Chat" },
           ["<leader>ac"] = { "<cmd>Copilot panel<CR>", desc = "Copilot panel" },
           ["<leader>aC"] = { "<cmd>Copilot clear<CR>", desc = "Copilot clear" },
           ["<leader>ag"] = { "<cmd>Copilot toggle_github_copilot<CR>", desc = "toggle github copilot" },
