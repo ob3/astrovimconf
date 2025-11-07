@@ -25,7 +25,7 @@ return {
           -- http rest
           ["<Space>rr"] = { "<cmd>Rest run<cr>", desc = "REST run" },
           ["<Space>ra"] = { "<cmd>Rest env show<cr>", desc = "REST show env" },
-          ["<Space>rs"] = { "<cmd>Telescope rest select_env<cr>", desc = "REST select env" },
+          ["<Space>re"] = { "<cmd>Telescope rest select_env<cr>", desc = "REST select env" },
           ["<Space>ry"] = { "<cmd>Rest curl yank<cr>", desc = "REST get curl" },
           ["<Space>rl"] = { "<cmd>Rest logs<cr>", desc = "REST log" },
 
