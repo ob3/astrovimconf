@@ -22,6 +22,21 @@ return {
           ["tc"] = { ":lua require('coverage').load(true)<CR>", desc = "load coverage" },
           ["tC"] = { ":lua require('coverage').clear()<CR>", desc = "clear coverage" },
 
+          -- http rest
+          ["<Space>rr"] = { "<cmd>Rest run<cr>", desc = "REST run" },
+          ["<Space>ra"] = { "<cmd>Rest env show<cr>", desc = "REST show env" },
+          ["<Space>rs"] = { "<cmd>Telescope rest select_env<cr>", desc = "REST select env" },
+          ["<Space>ry"] = { "<cmd>Rest curl yank<cr>", desc = "REST get curl" },
+          ["<Space>rl"] = { "<cmd>Rest logs<cr>", desc = "REST log" },
+
+          -- csv
+          ["<leader>cv"] = { "<cmd>CSVView<cr>", desc = "CSV View" },
+          ["<leader>cc"] = { "<cmd>CSVConvert<cr>", desc = "CSV Convert" },
+          ["<C-Space>"] = {
+            "<cmd>CsvViewToggle delimiter=, display_mode=border header_lnum=1<cr>",
+            desc = "format beautify csv",
+          },
+
           -- debug
           ["do"] = { ":lua function() require('dap').step_over()<CR>", desc = "step into" },
           ["<C-CR>"] = { ":lua function() require('dap').step_over()<CR>", desc = "step into" },
@@ -69,6 +84,7 @@ return {
           ["td"] = { ":lua require('neotest').run.run({strategy='dap'})<CR>", desc = "debug nearest test" },
           ["tf"] = { ":lua require('neotest').run.run(vim.fn.expand('%'))<CR>", desc = "run file test" },
           ["ta"] = { ":lua require('neotest').run.run(vim.fn.getcwd())<CR>", desc = "run all project test" },
+          ["<leader>jq"] = { ":%!jq .<CR>", desc = "Format JSON with jq" },
         },
       },
     },
